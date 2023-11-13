@@ -1,7 +1,17 @@
-.movieText {
+/* .movieText {
    color: black;
 }
 
 .movieHeading {
    color: black;
+} */
+
+.movieText {
+   color: purple;
+   font-size: 1.3vw;
+   text-align: left;
+}
+
+.movieHeading {
+   text-align: left;
 }
