@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 const RecipeAuthor = () => {
-   let authorLink = "";
-   let authorPhoto = "";
-   let authorName = "";
+   let authorLink = "https://simple-veganista.com/the-ultimate-vegetable-lentil-loaf/";
+   let authorPhoto = "https://simple-veganista.com/wp-content/uploads/2012/11/ultimate-vegetable-lentil-loaf-recipe-1.jpg";
+   let authorName = "Julie";
 
    return (
       <div>
@@ -17,16 +17,17 @@ const RecipeAuthor = () => {
 }
 
 const RecipeIngredients = () => {
-   const ingredients = [];
+   const ingredients = ["lentils", "broth", "garlic", "oats", "ketchup"];
+
+   let ingredientsListItems = ingredients.map((ingredient, index) => {
+      return <li key={index}>{ingredient}</li>
+   });
+
    return(
       <div>
          <h3>Recipe Ingredients</h3>
          <ul>
-            <li>{ingredients[0]}</li>
-            <li>{ingredients[1]}</li>
-            <li>{ingredients[2]}</li>
-            <li>{ingredients[3]}</li>
-            <li>{ingredients[4]}</li>
+            <li>{ingredientsListItems}</li>
          </ul>
       </div>
    );
@@ -36,8 +37,8 @@ const RecipeDescription = () => {
    return (
       <div> 
          <div>
-            <h1></h1>
-            <p></p>
+            <h1> Lentil Meatloaf </h1>
+            <p> It's a great meal for Thanksgiving </p>
          </div>
          <div className="recipePhotoBlock">
             <RecipeIngredients />
@@ -49,7 +50,7 @@ const RecipeDescription = () => {
 
 const RecipePhoto = () => {
    return (
-      <img src="" alt="" className="imageUpdates"/>
+      <img src="https://simple-veganista.com/wp-content/uploads/2012/11/ultimate-vegetable-lentil-loaf-recipe-1.jpg" alt="" className="imageUpdates"/>
    );
 }
 
